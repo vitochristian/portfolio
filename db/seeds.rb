@@ -61,3 +61,10 @@ end
 		thumb_image: "http://placehold.it/300x200" 
 	)
 end
+
+3.times do |tech|
+		Portfolio.last.technologies.create!(
+		name: "Technology #{tech}"
+	)
+
+end
