@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+	layout 'portfolio'
 	def index
 		@portfolio_items = Portfolio.all
 	end
@@ -41,7 +42,7 @@ class PortfoliosController < ApplicationController
   	
 	def show
 		@portfolio_item = Portfolio.find(params[:id])
-
+		@page_title = @portfolio_item.title
 	end
 
 	def destroy
@@ -65,5 +66,5 @@ def portfolio_params
 																		:subtitle,
 																		:body, 
 																		technologies_attributes: [:name]
-																		)  			
+																		)			
 end
