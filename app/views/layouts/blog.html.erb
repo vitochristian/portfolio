@@ -14,8 +14,8 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= login_helper %>
-    <%= render 'shared/nav', location: 'bottom'%>
     <%= yield %>
+    <%= render 'shared/nav', location: 'bottom'%>
     <%= source_helper %>
   </body>
 </html>
